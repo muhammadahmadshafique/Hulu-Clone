@@ -14,7 +14,7 @@ function Navebar() {
     <nav className="relative mb-4">
         <div className='flex justify-center mt-6   scrollbar-hide whitespace-nowrap gap-x-10 px-10 sm:px-12 sm:text-lg overflow-x-scroll lg:gap-x-18  '>
             {Object.entries(requests).map(([key, { title, url }])=>(
-                <h2 onClick={()=>router.push(`/?genre=${key}`)} className=' transition duration-400 transform  hover:scale-125 cursor-pointer active:text-red-300 hover:text-white'>{title}</h2>
+                <h2 key={key} onClick={()=>router.push(`/?genre=${key}`)} className=' transition duration-400 transform  hover:scale-125 cursor-pointer active:text-red-300 hover:text-white'>{title}</h2>
                 
             ))}
         </div>
